@@ -2,6 +2,9 @@
 
 namespace RayTracing
 {
+    using point3 = vec3;
+    using color = vec3;
+
     public sealed class Program
     {
         static void Main()
@@ -16,18 +19,24 @@ namespace RayTracing
 
                 for (int i = 0; i < image_width; i++)
                 {
-                    var r = (double)i / (image_width - 1);
-                    var g = (double)j / (image_height - 1);
-                    var b = 0.0;
-
-                    int ir = (int)(255.999 * r);
-                    int ig = (int)(255.999 * g);
-                    int ib = (int)(255.999 * b);
-
-                    Console.WriteLine($"{ir} {ig} {ib}");
-                    
+                    var pixel_color = new color((double)i/(image_width-1),(double)j/(image_height-1),0);
+                    WriteColor(pixel_color);
                 }
             }
         }
+        
+        
+        public static void WriteColor(color pixelColor)
+        {
+            double r = pixelColor.x;
+            double g = pixelColor.y;
+            double b = pixelColor.z;
+            int rByte = (int)(255.999 * r);
+            int gByte = (int)(255.999 * g);
+            int bByte = (int)(255.999 * b);
+            
+            Console.WriteLine($"{rByte} {gByte} {bByte}");
+        }
+
     }
 }
