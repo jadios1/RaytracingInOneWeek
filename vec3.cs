@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 
 namespace RayTracing;
+using point3 = vec3;
 
 public class vec3
 {
@@ -29,7 +30,7 @@ public class vec3
 
     public double this[int i]
     {
-        get { return e[i]; }
+        get => e[i];
         set { e[i] = value; }
     }
 
@@ -50,7 +51,26 @@ public class vec3
             a.e[2] * b
         );
     }
+    public static vec3 operator *(double b, vec3 a)
+    {
+        return new vec3(
+            a.e[0] * b,
+            a.e[1] * b,
+            a.e[2] * b
+        );
+    }
 
+    public double dot(vec3 u, vec3 v)
+    {
+        return u.e[0] * v.e[0] + u.e[1] * v.e[1] + u.e[2] * v.e[2];
+    }
+    public vec3 cross(vec3 u, vec3 v) {
+        
+        return new vec3(u.e[1] * v.e[2] - u.e[2] * v.e[1],
+            u.e[2] * v.e[0] - u.e[0] * v.e[2],
+            u.e[0] * v.e[1] - u.e[1] * v.e[0]);
+    }
+    
     public static vec3 operator /(vec3 a, double b)
     {
         return new vec3(
@@ -67,5 +87,19 @@ public class vec3
         return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
     }
 
+    public override string ToString()
+    {
+        return $"{e[0]} {e[1]} {e[2]}";
+    }
+    
+    public vec3 unit_vector(vec3 v) {
+        return v / v.length();
+    }
 
+
+    
 }
+
+
+
+
