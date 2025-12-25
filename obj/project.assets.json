@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/janczyzewski/Documents/csharp/raytracing/raytracing/raytracing.csproj",
+      "projectUniqueName": "/Users/janczyzewski/Documents/Raytracing/raytracing/raytracing/raytracing.csproj",
       "projectName": "raytracing",
-      "projectPath": "/Users/janczyzewski/Documents/csharp/raytracing/raytracing/raytracing.csproj",
+      "projectPath": "/Users/janczyzewski/Documents/Raytracing/raytracing/raytracing/raytracing.csproj",
       "packagesPath": "/Users/janczyzewski/.nuget/packages/",
-      "outputPath": "/Users/janczyzewski/Documents/csharp/raytracing/raytracing/obj/",
+      "outputPath": "/Users/janczyzewski/Documents/Raytracing/raytracing/raytracing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/janczyzewski/.nuget/NuGet/NuGet.Config"

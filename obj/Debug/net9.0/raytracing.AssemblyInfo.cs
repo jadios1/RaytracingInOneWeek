@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("raytracing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f4ad201ffd56bfa7700386d56c4e5d74badb3af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2ee75384f37a2b1dea3550632e7bfc21bce7584")]
 [assembly: System.Reflection.AssemblyProductAttribute("raytracing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("raytracing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

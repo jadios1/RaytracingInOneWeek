@@ -7,22 +7,39 @@ namespace RayTracing
 
     public sealed class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
-            int image_width = 256;
-            int image_height = 256;
-            Console.WriteLine($"P3\n {image_width} {image_height} \n256");
-    
-            for (int j = 0; j < image_height; j++)
-            {
-                Console.Error.WriteLine($"Scanlines remaining: {image_height - j}");
+            
+            
+            var aspectRatio = 16.0 / 9.0;
+            int imageWidth = 700;
 
-                for (int i = 0; i < image_width; i++)
+            int imageHeight = (int)(imageWidth / aspectRatio);
+            imageHeight = (imageHeight < 1) ? 1 : imageHeight;
+
+            var viewportHeight = 2.0;
+            var viewportWidth = viewportHeight * (double)((imageWidth)/imageHeight);
+
+            
+            
+            
+            
+            
+            
+            Console.WriteLine($"P3\n {imageWidth} {imageHeight} \n256");
+    
+            for (int j = 0; j < imageHeight; j++)
+            {
+                Console.Error.WriteLine($"Scanlines remaining: {imageHeight - j}");
+
+                for (int i = 0; i < imageWidth; i++)
                 {
-                    var pixel_color = new color((double)i/(image_width-1),(double)j/(image_height-1),0);
+                    var pixel_color = new color((double)i/(imageWidth-1),(double)j/(imageHeight-1),0);
                     WriteColor(pixel_color);
                 }
             }
+            
+
         }
         
         
